@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Services.CharacterService;
 
 namespace _Net_Core_web_API
 {
@@ -32,6 +33,8 @@ namespace _Net_Core_web_API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "_Net_Core_web_API", Version = "v1" });
             });
+
+            services.AddScoped<ICharacterService, CharacterService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,6 +45,7 @@ namespace _Net_Core_web_API
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "_Net_Core_web_API v1"));
+
             }
 
             app.UseHttpsRedirection();

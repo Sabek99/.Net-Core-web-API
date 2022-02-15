@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Models;
+using Services.CharacterService;
 
 namespace Controllers
 {
@@ -13,31 +14,32 @@ namespace Controllers
     [ApiController] 
     public class CharacterController : ControllerBase
     {
-        private static List<Character> characters = new List<Character>
+        private readonly ICharacterService _characterService;
+
+        public CharacterController(ICharacterService characterService)
         {
-            new Character(),
-            new Character{Name = "Sam"},
-            new Character{Id = 1, Name = "Taransh", Intelligence = 150}
-        };
+            this._characterService = characterService;
+            
+        }
 
         [Route("GetAll")]
         public IActionResult Get()
         {
-            return Ok(characters);
+            return Ok(_characterService.GetAllCharacter());
         }
         
         [HttpGet("{id}")]
         public IActionResult GetSingle(int id )
         {
-            return Ok(characters.FirstOrDefault(c => c.Id == id));
+            return Ok(_characterService.GetCharacterById(id));
         }
 
 
         [HttpPost]
         public IActionResult AddCharacter(Character newCharacter)
         {   
-            characters.Add(newCharacter);
-            return Ok(characters);
+            _characterService.AddCharacter(newCharacter);
+            return Ok(_characterService);
         }
 
     }
