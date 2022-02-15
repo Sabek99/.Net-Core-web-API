@@ -23,23 +23,23 @@ namespace Controllers
         }
 
         [Route("GetAll")]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
-            return Ok(_characterService.GetAllCharacter());
+            return Ok(await _characterService.GetAllCharacter());
         }
         
         [HttpGet("{id}")]
-        public IActionResult GetSingle(int id )
+        public async Task<IActionResult> GetSingle(int id )
         {
-            return Ok(_characterService.GetCharacterById(id));
+            return Ok(await _characterService.GetCharacterById(id));
         }
 
 
         [HttpPost]
-        public IActionResult AddCharacter(Character newCharacter)
+        public async Task<IActionResult>  AddCharacter(Character newCharacter)
         {   
-            _characterService.AddCharacter(newCharacter);
-            return Ok(_characterService);
+            
+            return Ok(await _characterService.AddCharacter(newCharacter));
         }
 
     }
