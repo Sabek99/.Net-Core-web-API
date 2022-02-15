@@ -1,0 +1,29 @@
+G:\CODES\C#\.Net Core web API\bin\Debug\net5.0\appsettings.Development.json
+G:\CODES\C#\.Net Core web API\bin\Debug\net5.0\appsettings.json
+G:\CODES\C#\.Net Core web API\bin\Debug\net5.0\.Net Core web API.exe
+G:\CODES\C#\.Net Core web API\bin\Debug\net5.0\.Net Core web API.deps.json
+G:\CODES\C#\.Net Core web API\bin\Debug\net5.0\.Net Core web API.runtimeconfig.json
+G:\CODES\C#\.Net Core web API\bin\Debug\net5.0\.Net Core web API.runtimeconfig.dev.json
+G:\CODES\C#\.Net Core web API\bin\Debug\net5.0\.Net Core web API.dll
+G:\CODES\C#\.Net Core web API\bin\Debug\net5.0\ref\.Net Core web API.dll
+G:\CODES\C#\.Net Core web API\bin\Debug\net5.0\.Net Core web API.pdb
+G:\CODES\C#\.Net Core web API\bin\Debug\net5.0\Microsoft.OpenApi.dll
+G:\CODES\C#\.Net Core web API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+G:\CODES\C#\.Net Core web API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+G:\CODES\C#\.Net Core web API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+G:\CODES\C#\.Net Core web API\obj\Debug\net5.0\.Net Core web API.csproj.AssemblyReference.cache
+G:\CODES\C#\.Net Core web API\obj\Debug\net5.0\.Net Core web API.GeneratedMSBuildEditorConfig.editorconfig
+G:\CODES\C#\.Net Core web API\obj\Debug\net5.0\.Net Core web API.AssemblyInfoInputs.cache
+G:\CODES\C#\.Net Core web API\obj\Debug\net5.0\.Net Core web API.AssemblyInfo.cs
+G:\CODES\C#\.Net Core web API\obj\Debug\net5.0\.Net Core web API.csproj.CoreCompileInputs.cache
+G:\CODES\C#\.Net Core web API\obj\Debug\net5.0\.Net Core web API.MvcApplicationPartsAssemblyInfo.cs
+G:\CODES\C#\.Net Core web API\obj\Debug\net5.0\.Net Core web API.MvcApplicationPartsAssemblyInfo.cache
+G:\CODES\C#\.Net Core web API\obj\Debug\net5.0\staticwebassets\.Net Core web API.StaticWebAssets.Manifest.cache
+G:\CODES\C#\.Net Core web API\obj\Debug\net5.0\staticwebassets\.Net Core web API.StaticWebAssets.xml
+G:\CODES\C#\.Net Core web API\obj\Debug\net5.0\scopedcss\bundle\.Net Core web API.styles.css
+G:\CODES\C#\.Net Core web API\obj\Debug\net5.0\.Net Core web API.RazorTargetAssemblyInfo.cache
+G:\CODES\C#\.Net Core web API\obj\Debug\net5.0\.Net Core web API.csproj.CopyComplete
+G:\CODES\C#\.Net Core web API\obj\Debug\net5.0\.Net Core web API.dll
+G:\CODES\C#\.Net Core web API\obj\Debug\net5.0\ref\.Net Core web API.dll
+G:\CODES\C#\.Net Core web API\obj\Debug\net5.0\.Net Core web API.pdb
+G:\CODES\C#\.Net Core web API\obj\Debug\net5.0\.Net Core web API.genruntimeconfig.cache
