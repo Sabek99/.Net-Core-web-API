@@ -15,20 +15,26 @@ namespace Services.CharacterService
             new Character{Id = 1, Name = "Taransh", Intelligence = 150}
         };
 
-        public async Task<List<Character>> AddCharacter(Character newCharacter)
+        public async Task<ServiceResponce<List<Character>>> AddCharacter(Character newCharacter)
         {
+            ServiceResponce<List<Character>> serviceResponce = new ServiceResponce<List<Character>>();
             characters.Add(newCharacter);
-            return characters;
+            serviceResponce.Data = characters;
+            return serviceResponce;
         }
 
-        public async Task<List<Character>> GetAllCharacter()
+        public async Task<ServiceResponce<List<Character>>> GetAllCharacter()
         {
-            return characters;
+            ServiceResponce<List<Character>> serviceResponce = new ServiceResponce<List<Character>>();
+            serviceResponce.Data = characters;
+            return serviceResponce;
         }
 
-        public async Task<Character> GetCharacterById(int id)
+        public async Task<ServiceResponce<Character>> GetCharacterById(int id)
         {
-            return characters.FirstOrDefault(c => c.Id == id);
+            ServiceResponce<Character> serviceResponce = new ServiceResponce<Character>();
+            serviceResponce.Data = characters.FirstOrDefault(c => c.Id == id);
+            return serviceResponce;
         }
     }
 }
