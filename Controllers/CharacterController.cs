@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Dtos.Character;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Models;
@@ -36,7 +37,7 @@ namespace Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult>  AddCharacter(Character newCharacter)
+        public async Task<IActionResult>  AddCharacter(AddCharacterDto newCharacter)
         {   
             
             return Ok(await _characterService.AddCharacter(newCharacter));

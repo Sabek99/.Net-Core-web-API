@@ -27,3 +27,9 @@ G:\CODES\C#\.Net Core web API\obj\Debug\net5.0\.Net Core web API.dll
 G:\CODES\C#\.Net Core web API\obj\Debug\net5.0\ref\.Net Core web API.dll
 G:\CODES\C#\.Net Core web API\obj\Debug\net5.0\.Net Core web API.pdb
 G:\CODES\C#\.Net Core web API\obj\Debug\net5.0\.Net Core web API.genruntimeconfig.cache
+G:\CODES\C#\.Net Core web API\bin\Debug\net5.0\AutoMapper.dll
+G:\CODES\C#\.Net Core web API\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+G:\CODES\C#\.Net Core web API\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+G:\CODES\C#\.Net Core web API\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+G:\CODES\C#\.Net Core web API\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+G:\CODES\C#\.Net Core web API\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
