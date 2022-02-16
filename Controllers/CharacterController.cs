@@ -49,7 +49,17 @@ namespace Controllers
             ServiceResponce<GetCharacterDto> responce = await _characterService.UpdateCharacter(UpdateCharacter);
             if(responce.Data == null)
                 return NotFound(responce);
-                
+
+            return Ok(responce);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id )
+        {
+            ServiceResponce<List<GetCharacterDto>> responce = await _characterService.DeleteCharacter(id);
+            if(responce.Data == null)
+                return NotFound(responce);
+
             return Ok(responce);
         }
 

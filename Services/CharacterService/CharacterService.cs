@@ -65,6 +65,23 @@ namespace Services.CharacterService
             }
             return serviceResponce;
         }
-             
+
+        public async Task<ServiceResponce<List<GetCharacterDto>>> DeleteCharacter(int id)
+        {
+            ServiceResponce<List<GetCharacterDto>> serviceResponce = new ServiceResponce<List<GetCharacterDto>>();
+            try{
+            Character character = characters.First(c => c.Id == id);
+            characters.Remove(character);
+
+            serviceResponce.Data = (characters.Select(c => _mapper.Map<GetCharacterDto>(c))).ToList();
+            }
+            catch(Exception ex){
+                 serviceResponce.Success = false;
+                 serviceResponce.Message = ex.Message;
+            }
+            return serviceResponce;
+        }
+
+       
     }
 }
