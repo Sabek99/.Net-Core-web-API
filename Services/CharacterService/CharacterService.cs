@@ -59,13 +59,16 @@ namespace Services.CharacterService
         {
             ServiceResponce<GetCharacterDto> serviceResponce = new ServiceResponce<GetCharacterDto>();
             try{
-            Character character = characters.FirstOrDefault(c => c.Id == updateCharacter.Id);
+            Character character = await _context.characters.FirstOrDefaultAsync(c => c.Id == updateCharacter.Id);
             character.Name = updateCharacter.Name;
             character.Class = updateCharacter.Class;
             character.Defence = updateCharacter.Defence;
             character.HitPoint = updateCharacter.HitPoints;
             character.Intelligence = updateCharacter.Intelligence;
             character.Strength = character.Strength;
+
+            _context.characters.Update(character);
+            await _context.SaveChangesAsync();
 
             serviceResponce.Data = _mapper.Map<GetCharacterDto>(character);
             }
