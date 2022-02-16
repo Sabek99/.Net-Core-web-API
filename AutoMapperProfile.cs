@@ -13,6 +13,7 @@ namespace _Net_Core_web_API
         public AutoMapperProfile()
         {
             CreateMap<Character, GetCharacterDto>();
+            CreateMap<AddCharacterDto, Character>();
         }
     }
 }
