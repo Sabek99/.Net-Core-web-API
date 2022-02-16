@@ -14,7 +14,7 @@ namespace Services.CharacterService
         {
             new Character(),
             new Character{Name = "Sam"},
-            new Character{Id = 1, Name = "Taransh", Intelligence = 150}
+            new Character{Id = 1, Name = "Theo", Intelligence = 150}
         };
         private readonly IMapper _mapper;
 
@@ -44,5 +44,23 @@ namespace Services.CharacterService
             serviceResponce.Data = _mapper.Map<GetCharacterDto>(characters.FirstOrDefault(c => c.Id == id));
             return serviceResponce;
         }
+
+        public async Task<ServiceResponce<GetCharacterDto>> UpdateCharacter(UpdateCharacterDto updateCharacter)
+        {
+            ServiceResponce<GetCharacterDto> serviceResponce = new ServiceResponce<GetCharacterDto>();
+            
+            Character character = characters.FirstOrDefault(c => c.Id == updateCharacter.Id);
+            character.Name = updateCharacter.Name;
+            character.Class = updateCharacter.Class;
+            character.Defence = updateCharacter.Defence;
+            character.HitPoint = updateCharacter.HitPoints;
+            character.Intelligence = updateCharacter.Intelligence;
+            character.Strength = character.Strength;
+
+            serviceResponce.Data = _mapper.Map<GetCharacterDto>(character);
+
+            return serviceResponce;
+        }
+             
     }
 }
