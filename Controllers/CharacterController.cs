@@ -46,8 +46,11 @@ namespace Controllers
         [HttpPut]
         public async Task<IActionResult>  UpdateCharacter(UpdateCharacterDto UpdateCharacter)
         {   
-            
-            return Ok(await _characterService.UpdateCharacter(UpdateCharacter));
+            ServiceResponce<GetCharacterDto> responce = await _characterService.UpdateCharacter(UpdateCharacter);
+            if(responce.Data == null)
+                return NotFound(responce);
+                
+            return Ok(responce);
         }
 
 

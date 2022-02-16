@@ -48,7 +48,7 @@ namespace Services.CharacterService
         public async Task<ServiceResponce<GetCharacterDto>> UpdateCharacter(UpdateCharacterDto updateCharacter)
         {
             ServiceResponce<GetCharacterDto> serviceResponce = new ServiceResponce<GetCharacterDto>();
-            
+            try{
             Character character = characters.FirstOrDefault(c => c.Id == updateCharacter.Id);
             character.Name = updateCharacter.Name;
             character.Class = updateCharacter.Class;
@@ -58,7 +58,11 @@ namespace Services.CharacterService
             character.Strength = character.Strength;
 
             serviceResponce.Data = _mapper.Map<GetCharacterDto>(character);
-
+            }
+            catch(Exception ex){
+                 serviceResponce.Success = false;
+                 serviceResponce.Message = ex.Message;
+            }
             return serviceResponce;
         }
              
