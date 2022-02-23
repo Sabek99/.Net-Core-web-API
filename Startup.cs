@@ -40,6 +40,7 @@ namespace _Net_Core_web_API
             });
 
             services.AddScoped<ICharacterService, CharacterService>();
+            services.AddScoped<IAuthRepo, AuthRepo>();
             
         }
 
@@ -51,6 +52,7 @@ namespace _Net_Core_web_API
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "_Net_Core_web_API v1"));
+               
 
             }
 
